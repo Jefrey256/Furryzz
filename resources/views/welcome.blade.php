@@ -3,16 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      background-color: #333;
-      color: #636b6f;
-      font-family: 'Nunito', sans-serif;
-      font-weight: 200;
-      height: 100vh;
-      margin: 0;
-    }
-  </style>
+  
   @vite('resources/css/app.css')
   
 </head>
