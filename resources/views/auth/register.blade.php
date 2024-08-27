@@ -29,6 +29,7 @@
             </div>
             <button type="submit" class="w-full bg-indigo-500 text-white font-bold py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Registrar</button>
         </form>
+        <a href="{{ route('login') }}" class="block mt-4 text-sm text-center text-indigo-600 hover:text-indigo-800">Já tem uma conta? Faça o login</a>
     </div>
 </body>
 </html>

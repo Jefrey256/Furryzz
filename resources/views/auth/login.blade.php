@@ -21,6 +21,7 @@
             </div>
             <button type="submit" class="w-full bg-indigo-500 text-white font-bold py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Login</button>
         </form>
+        <a href="{{ route('register') }}" class="text-center block mt-4 text-sm font-bold text-indigo-600 hover:text-indigo-500">sem cadastro? se registrer</a>
     </div>
 </body>
 </html>
