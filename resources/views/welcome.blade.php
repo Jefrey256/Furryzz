@@ -11,7 +11,6 @@
   <h1 class="text-3xl font-bold underline">
     Hello world!
   </h1>
-  
   <h2 class="text-3xl text-red-800">Hello, world!</h2>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, sit voluptatibus, blanditiis deserunt ex laborum sunt vitae ipsam natus, laudantium nostrum itaque magnam voluptatem officia! Iusto consequatur ab necessitatibus animi.
   Quibusdam reprehenderit soluta perferendis accusantium necessitatibus molestiae voluptates veniam tempore, aut, minima nam voluptas, inventore rem omnis eligendi quae iusto. Aliquam cum id, nesciunt atque sequi corporis inventore aliquid a?
@@ -23,7 +22,11 @@
   Ipsum magnam debitis accusamus quis quidem reprehenderit a. Velit voluptates suscipit accusantium in at illo officiis, inventore autem mollitia quis natus fuga error voluptas quas dicta, qui sunt quaerat unde.</p>
   
   <!-- Adicione o link de login aqui -->
-  
+  <div class="mt-4">
+    <a href="{{ route('login') }}" class="inline-block px-6 py-3 text-white bg-blue-600 rounded hover:bg-blue-700">
+      Login
+    </a>
+  </div>
 
   <h2>openssl_x509_fingerprintqPSDOFH EG N</h2>
 </body>
