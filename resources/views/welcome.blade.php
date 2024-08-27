@@ -1,33 +1,35 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  @vite('resources/css/app.css')
-  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Laravel</title>
+    @vite('resources/css/app.css')
 </head>
-<body class="bg-gray-300">
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-  <h2 class="text-3xl text-red-800">Hello, world!</h2>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, sit voluptatibus, blanditiis deserunt ex laborum sunt vitae ipsam natus, laudantium nostrum itaque magnam voluptatem officia! Iusto consequatur ab necessitatibus animi.
-  Quibusdam reprehenderit soluta perferendis accusantium necessitatibus molestiae voluptates veniam tempore, aut, minima nam voluptas, inventore rem omnis eligendi quae iusto. Aliquam cum id, nesciunt atque sequi corporis inventore aliquid a?
-  Possimus ducimus ipsa saepe dignissimos qui maxime voluptatibus, corrupti officia corporis porro nobis? Sunt culpa, saepe nihil recusandae aut asperiores quo praesentium exercitationem vel rerum ipsam quibusdam, eius doloribus expedita!
-  Saepe molestias architecto cumque dolorem totam, minus optio sapiente. Earum, suscipit sed? Quod a sunt explicabo numquam reprehenderit voluptatum quam magnam assumenda, totam doloremque neque eaque natus sit earum saepe.
-  Facilis nobis, officiis commodi cumque quidem amet voluptatem rerum assumenda delectus. Laboriosam quo corporis dolores et consectetur hic quibusdam quod sapiente impedit perspiciatis dolorem cum porro repellendus, in delectus similique?
-  Nam voluptates nihil velit quos officiis sint, quo sunt obcaecati consectetur impedit adipisci neque voluptatem magni. Animi veritatis dolore facere quos ducimus quam accusantium dolores nesciunt cum, sit unde id!
-  Sit harum iure tempore dolorum, excepturi at assumenda voluptas magnam esse, voluptatibus reprehenderit architecto consequatur sint beatae aut deleniti atque nam accusantium voluptate omnis, iusto fugiat ipsam! Obcaecati, saepe eveniet.
-  Ipsum magnam debitis accusamus quis quidem reprehenderit a. Velit voluptates suscipit accusantium in at illo officiis, inventore autem mollitia quis natus fuga error voluptas quas dicta, qui sunt quaerat unde.</p>
-  
-  <!-- Adicione o link de login aqui -->
-  <div class="mt-4">
-    <a href="{{ route('login') }}" class="inline-block px-6 py-3 text-white bg-blue-600 rounded hover:bg-blue-700">
-      Login
-    </a>
-  </div>
+<body class="bg-cor3 dark:bg-slate-800 text-cor4 flex flex-col min-h-screen" id="body">
+    @include('layouts.navbar')
+    
+    <div class="container mx-auto mt-10 flex-grow">
+        <h1 class="text-cor5 text-4xl font-bold text-center mt-10">Pega no meu saco</h1>
+        <p class="text-center mt-4">Este é um exemplo de menu hambúrguer utilizando Tailwind CSS.</p>
+        
+        <div>
+            @include('articles.images')
+        </div>
+    </div>
 
-  <h2>openssl_x509_fingerprintqPSDOFH EG N</h2>
+    <footer id="footer" class="bg-cor1 p-4">
+        <h1 class="text-white p-4 text-center font-bold">Criador Jeredy</h1>
+    </footer>
+
+    <button id="theme-toggle" class="fixed top-20 right-120 bg-gray-600 dark:bg-gray-100 text-gray-100 dark:text-gray-800 p-1 rounded-full">
+        <svg id="theme-toggle-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <!-- Ícones serão adicionados via JavaScript -->
+        </svg>
+    </button>
+
+    
+    @vite('resources/js/app.js')
+   
 </body>
 </html>

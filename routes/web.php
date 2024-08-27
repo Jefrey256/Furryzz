@@ -6,8 +6,18 @@ use App\Http\Controllers\AuthController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/page', function () {
+    return view('/articles/page');
+});
 
-Route::get('/login', [AuthController::class, 'loginForm'])->name('login');
-Route::post('/login', [AuthController::class, 'login']);
-Route::get('/register', [AuthController::class, 'registerForm'])->name('register');
-Route::post('/register', [AuthController::class, 'register']);
+Route::get("/any", function () {
+    return view('permite tudo');
+});
+
+Route::get('/page2', function () {
+    return view('/articles/page2');
+});
+
+Route::get('/cisco', function () {
+    return view('/site/cisco');
+});
