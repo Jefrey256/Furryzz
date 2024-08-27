@@ -1,23 +1,20 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthController;
 
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/page', function () {
-    return view('/articles/page');
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get("/any", function () {
-    return view('permite tudo');
-});
-
-Route::get('/page2', function () {
-    return view('/articles/page2');
-});
-
-Route::get('/cisco', function () {
-    return view('/site/cisco');
-});
+require __DIR__.'/auth.php';
