@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Variáveis CSS definidas no :root para temas personalizados */
+:root {
+    --cor1: #1E3A8A;
+    --cor2: #FFFFFF;
+    --cor3: #F3F4F6;
+    --cor4: #111827;
+    --cor5: #2563EB;
+    --cor6: #E11D48;
+    --cor7: #3B82F6;
+    --cor8: #4B5563;
+    --cor9: #1D4ED8;
+}
+
+/* Estilos personalizados dentro da camada base do Tailwind */
+@layer base {
+  .dark .bg-cor3 {
+    background-color: #1e293b; /* Define a cor de fundo no modo escuro */
+  }
+  .dark .text-cor4 {
+    color: #e2e8f0; /* Define a cor do texto no modo escuro */
+  }
+}
+
+/* Estilização de imagens */
+img {
+    width: 150px;
+    height: 150px;
+}
